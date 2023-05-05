@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        style = "@style/title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_an_rgb_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/intro_text"
+        style = "@style/intro_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_tow_hexidecimal_characters_between_0_9_a_f_or_a_f_without_the_for_each_channel"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/red_channel_wrapper"
+        style = "@style/input_style"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/intro_text"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            style = "@style/input_margin_bottom"
+            android:inputType="textCapCharacters"
+            android:digits ="ABCDEFabcdef0123456789"
+            android:id="@+id/red_channel"
+            android:hint="@string/red_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/blue_channel_wrapper"
+        style = "@style/input_style"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/red_channel_wrapper"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            style = "@style/input_margin_bottom"
+            android:inputType="textCapCharacters"
+            android:digits ="ABCDEFabcdef0123456789"
+            android:id="@+id/blue_channel"
+            android:hint="@string/blue_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/green_channel_wrapper"
+        android:layout_height="wrap_content"
+        style = "@style/input_style"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/blue_channel_wrapper"
+        app:layout_constraintStart_toStartOf="parent"
+       >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            style = "@style/input_margin_bottom"
+            android:inputType="textCapCharacters"
+            android:digits ="ABCDEFabcdef0123456789"
+            android:id="@+id/green_channel"
+            android:hint="@string/green_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_rgb_color"
+        app:layout_constraintTop_toBottomOf="@id/green_channel_wrapper"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/color_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/enter_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/created_color_display_panel"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

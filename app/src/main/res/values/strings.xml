@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Colors</string>
+    <string name="add_tow_hexidecimal_characters_between_0_9_a_f_or_a_f_without_the_for_each_channel">Add two hexadecimal characters between 0-9, A-F or a-f without the \'#\' for each channel</string>
+    <string name="create_an_rgb_color">Create an RGB Color</string>
+    <string name="red_channel">Red Channel</string>
+    <string name="blue_channel">Blue Channel</string>
+    <string name="green_channel">Green Channel</string>
+    <string name="create_rgb_color">CREATE RGB COLOR</string>
+    <string name="created_color_display_panel">Created color display panel</string>
+</resources>
